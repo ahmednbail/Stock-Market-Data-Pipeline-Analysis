@@ -24,5 +24,5 @@ with DAG(
     extract_stock_data = PapermillOperator(
         task_id='extract_stock_data',
         input_nb=str(notebooks_dir / 'extract.ipynb'),
-        output_nb=str(notebooks_dir / 'extract_stock_data_output_{{ run_id | replace(":", "_") }}.ipynb'),
+        output_nb=str(notebooks_dir / 'extract_stock_data_output.ipynb'),
     )
