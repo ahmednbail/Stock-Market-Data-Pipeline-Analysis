@@ -26,3 +26,17 @@ with DAG(
         input_nb=str(notebooks_dir / 'extract.ipynb'),
         output_nb=str(notebooks_dir / 'extract_stock_data_output.ipynb'),
     )
+
+    
+    clean_and_transform_stock_data = PapermillOperator(
+        task_id='transform_stock_data',
+        input_nb=str(notebooks_dir / 'Clean&Transform.ipynb'),
+        output_nb=str(notebooks_dir / 'transform_stock_data_output.ipynb'),
+    )
+
+
+    extract_stock_data >> clean_and_transform_stock_data
+    
+
+    
+    
