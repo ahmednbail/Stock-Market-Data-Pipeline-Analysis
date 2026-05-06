@@ -37,6 +37,6 @@ INSERT INTO dim_company VALUES
     ('TSLA',  'Tesla Inc.');
 
 
-select count(*) from fact_stock_prices
+select * from fact_stock_prices
 
 
